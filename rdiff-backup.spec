@@ -1,6 +1,6 @@
 %define name	rdiff-backup
-%define version 1.1.9
-%define release %mkrel 1
+%define version	1.1.11
+%define release	%mkrel 1
 
 Summary:	Backup software
 Name:		%{name}
@@ -9,13 +9,14 @@ Release:	%{release}
 License:	GPL
 Group:		Networking/Other
 URL:		http://www.nongnu.org/rdiff-backup/
-Source:		http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.bz2
+Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.bz2
+# docs are already installed by %doc macro
+Patch0:		rdiff-backup-1.1.11-dont-install-docs.patch
 Requires:	python
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-python
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Epoch:		1
 
 %description
@@ -32,22 +33,18 @@ a remote location, and only the differences from the previous
 backup will be transmitted.
 
 %prep
-
 %setup -q
+%patch0 -p1 -b .dont-install-docs
 
 %build
 python setup.py build
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
+rm -rf %{buildroot}
 python \
-    setup.py install \
-    --optimize=2 \
-    --root=%{buildroot}
-
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+	setup.py install \
+	--optimize=2 \
+	--root=%{buildroot}
 
 %files
 %defattr(644,root,root,755)
@@ -60,6 +57,4 @@ python \
 %attr(755,root,root) %{py_platsitedir}/rdiff_backup/*.so
 %{py_platsitedir}/rdiff_backup-*.egg-info
 %{_mandir}/man1/rdiff-backup*
-
-
 
