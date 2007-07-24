@@ -1,11 +1,8 @@
-%define name	rdiff-backup
-%define version	1.1.11
-%define release	%mkrel 1
 
 Summary:	Backup software
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		rdiff-backup
+Version:	1.1.12
+Release:	%mkrel 1
 License:	GPL
 Group:		Networking/Other
 URL:		http://www.nongnu.org/rdiff-backup/
@@ -48,7 +45,7 @@ python \
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG README FAQ.html examples.html
+%doc CHANGELOG README FAQ.html examples.html COPYING
 %attr(755,root,root) %{_bindir}/rdiff-backup
 %attr(755,root,root) %{_bindir}/rdiff-backup-statistics
 %dir %{py_platsitedir}/rdiff_backup
