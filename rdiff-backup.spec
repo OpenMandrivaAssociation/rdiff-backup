@@ -1,12 +1,12 @@
 
 Summary:	Backup software
 Name:		rdiff-backup
-Version:	1.1.12
+Version:	1.1.14
 Release:	%mkrel 1
 License:	GPL
 Group:		Networking/Other
 URL:		http://www.nongnu.org/rdiff-backup/
-Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.bz2
+Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.gz
 # docs are already installed by %doc macro
 Patch0:		rdiff-backup-1.1.11-dont-install-docs.patch
 Requires:	python
