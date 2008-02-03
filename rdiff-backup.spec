@@ -1,9 +1,9 @@
 
 Summary:	Backup software
 Name:		rdiff-backup
-Version:	1.1.14
+Version:	1.1.15
 Release:	%mkrel 1
-License:	GPL
+License:	GPLv2
 Group:		Networking/Other
 URL:		http://www.nongnu.org/rdiff-backup/
 Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.gz
@@ -37,7 +37,6 @@ backup will be transmitted.
 python setup.py build
 
 %install
-rm -rf %{buildroot}
 python \
 	setup.py install \
 	--optimize=2 \
@@ -45,7 +44,7 @@ python \
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG README FAQ.html examples.html COPYING
+%doc CHANGELOG README FAQ.html examples.html
 %attr(755,root,root) %{_bindir}/rdiff-backup
 %attr(755,root,root) %{_bindir}/rdiff-backup-statistics
 %dir %{py_platsitedir}/rdiff_backup
