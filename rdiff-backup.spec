@@ -5,6 +5,7 @@ Version:	1.1.15
 Release:	%mkrel 1
 License:	GPLv2
 Group:		Networking/Other
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.nongnu.org/rdiff-backup/
 Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.gz
 # docs are already installed by %doc macro
