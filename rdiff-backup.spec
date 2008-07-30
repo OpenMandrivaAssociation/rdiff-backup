@@ -1,7 +1,7 @@
 
 Summary:	Backup software
 Name:		rdiff-backup
-Version:	1.1.16
+Version:	1.2.0
 Release:	%mkrel 1
 License:	GPLv2
 Group:		Networking/Other
@@ -9,7 +9,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.nongnu.org/rdiff-backup/
 Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.gz
 # docs are already installed by %doc macro
-Patch0:		rdiff-backup-1.1.11-dont-install-docs.patch
+Patch0:		rdiff-backup-1.2.0-dont-install-docs.patch
 Requires:	python
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
