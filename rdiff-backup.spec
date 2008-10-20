@@ -1,8 +1,8 @@
 
 Summary:	Backup software
 Name:		rdiff-backup
-Version:	1.2.1
-Release:	%mkrel 2
+Version:	1.2.2
+Release:	%mkrel 1
 License:	GPLv2
 Group:		Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
