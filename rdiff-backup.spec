@@ -1,7 +1,7 @@
 
 Summary:	Backup software
 Name:		rdiff-backup
-Version:	1.2.6
+Version:	1.3.2
 Release:	%mkrel 1
 License:	GPLv2
 Group:		Networking/Other
