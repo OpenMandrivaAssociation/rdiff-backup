@@ -60,7 +60,6 @@ rm -rf %{buildroot}
 %attr(755,root,root) %{_bindir}/rdiff-backup-statistics
 %dir %{py_platsitedir}/rdiff_backup
 %{py_platsitedir}/rdiff_backup/*.py
-%{py_platsitedir}/rdiff_backup/*.py[co]
 %attr(755,root,root) %{py_platsitedir}/rdiff_backup/*.so
 %{py_platsitedir}/rdiff_backup-*.egg-info
 %{_mandir}/man1/rdiff-backup*
