@@ -2,7 +2,7 @@
 Summary:	Backup software
 Name:		rdiff-backup
 Version:	1.3.3
-Release:	4
+Release:	5
 License:	GPLv2
 Group:		Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -12,10 +12,10 @@ Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{ver
 Source1:	rdiff-backup.bash_completion
 # docs are already installed by %doc macro
 Patch0:		rdiff-backup-1.2.0-dont-install-docs.patch
-Requires:	python
+Requires:	python2
 BuildRequires:	librsync-devel >= 0.9.6
 BuildRequires:	popt-devel
-BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	python2-devel >= 2.2.1
 BuildRequires:	python-rpm
 Epoch:		1
 
@@ -37,11 +37,11 @@ backup will be transmitted.
 %patch0 -p1 -b .dont-install-docs
 
 %build
-python setup.py build
+python2 setup.py build
 
 %install
 rm -rf %{buildroot}
-python \
+python2 \
 	setup.py install \
 	--optimize=2 \
 	--root=%{buildroot}
@@ -59,9 +59,9 @@ rm -rf %{buildroot}
 %attr(755,root,root) %{_bindir}/rdiff-backup
 %attr(755,root,root) %{_bindir}/rdiff-backup-statistics
 %dir %{py_platsitedir}/rdiff_backup
-%{py_platsitedir}/rdiff_backup/*.py
+%{py2_platsitedir}/rdiff_backup/*.py
 %attr(755,root,root) %{py_platsitedir}/rdiff_backup/*.so
-%{py_platsitedir}/rdiff_backup-*.egg-info
+%{py2_platsitedir}/rdiff_backup-*.egg-info
 %{_mandir}/man1/rdiff-backup*
 %config(noreplace) %{_sysconfdir}/bash_completion.d/%name
 
