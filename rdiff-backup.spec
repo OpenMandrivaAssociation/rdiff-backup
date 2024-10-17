@@ -6,7 +6,7 @@ Release:	5
 License:	GPLv2
 Group:		Networking/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:		http://www.nongnu.org/rdiff-backup/
+URL:		https://www.nongnu.org/rdiff-backup/
 Source0:	http://download.savannah.nongnu.org/releases/rdiff-backup/%{name}-%{version}.tar.gz
 # from http://wiki.rdiff-backup.org/wiki/index.php/BashCompletion
 Source1:	rdiff-backup.bash_completion
