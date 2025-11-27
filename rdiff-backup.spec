@@ -5,7 +5,7 @@
 
 # when using a commit_tag (i.e. not nil) add a commit date
 # decoration ~0.yyyyMMdd to Version number
-%define commit_date 20250914
+%define commit_date 20251123
 
 # their releases are not forthcoming, but the project is active
 %define major_ver 2.6.1
@@ -16,7 +16,7 @@
 
 Name:           rdiff-backup
 Version:        %{major_ver}%{?release_type:%{?dev_release}}%{?short_commit_tag}
-Release:        1
+Release:        2
 Summary:        Reverse differential backup tool, over a network or locally
 Group:          Utilities
 License:        GPLv2
