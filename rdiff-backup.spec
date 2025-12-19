@@ -16,7 +16,7 @@
 
 Name:           rdiff-backup
 Version:        %{major_ver}%{?release_type:%{?dev_release}}%{?short_commit_tag}
-Release:        2
+Release:        3
 Summary:        Reverse differential backup tool, over a network or locally
 Group:          Utilities
 License:        GPLv2
@@ -34,6 +34,10 @@ BuildSystem:    python
 BuildRequires:  librsync-devel
 BuildRequires:  pkgconfig(libacl)
 BuildRequires:  pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:  rdiff asciidoctor netcat
 
 %description
