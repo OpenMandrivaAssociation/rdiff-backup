@@ -16,7 +16,7 @@
 
 Name:           rdiff-backup
 Version:        %{major_ver}%{?release_type:%{?dev_release}}%{?short_commit_tag}
-Release:        3
+Release:        4
 Summary:        Reverse differential backup tool, over a network or locally
 Group:          Utilities
 License:        GPLv2
